@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>643</width>
+    <height>398</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LDIMS</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1441</width>
+      <height>791</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="usesScrollButtons">
+     <bool>true</bool>
+    </property>
+    <property name="movable">
+     <bool>false</bool>
+    </property>
+    <property name="tabBarAutoHide">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="tab_file_search">
+     <attribute name="title">
+      <string>파일 검색</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>621</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>1. 파일(Tomato.xlsm) 불러오기</string>
+      </property>
+      <widget class="QLineEdit" name="line_file_location">
+       <property name="geometry">
+        <rect>
+         <x>79</x>
+         <y>37</y>
+         <width>401</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>39</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>파일 경로 : </string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_load_tomato">
+       <property name="geometry">
+        <rect>
+         <x>496</x>
+         <y>27</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>불러오기</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>621</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>2. 검색 조건 설정</string>
+      </property>
+      <widget class="QDateEdit" name="date_file_from">
+       <property name="geometry">
+        <rect>
+         <x>77</x>
+         <y>24</y>
+         <width>141</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="date_file_to">
+       <property name="geometry">
+        <rect>
+         <x>259</x>
+         <y>25</y>
+         <width>141</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>31</y>
+         <width>56</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>검색일 : </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>231</x>
+         <y>29</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>~</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="sb_file_threshold">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>88</x>
+         <y>59</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="minimum">
+        <number>7</number>
+       </property>
+       <property name="maximum">
+        <number>21</number>
+       </property>
+       <property name="singleStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>21</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>69</y>
+         <width>221</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;일치 개수 : &lt;/p&gt;&lt;p&gt;(최대 : 21 - AMEL 포함)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="cb_file_db_save">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>136</y>
+         <width>311</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>검색 후 DB에 저장 (완전한 단일 프로파일만 해당.)</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <zorder>label_4</zorder>
+      <zorder>date_file_from</zorder>
+      <zorder>date_file_to</zorder>
+      <zorder>label_2</zorder>
+      <zorder>label_3</zorder>
+      <zorder>sb_file_threshold</zorder>
+      <zorder>cb_file_db_save</zorder>
+     </widget>
+     <widget class="QPushButton" name="btn_file_search">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>302</y>
+        <width>621</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>검색</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_individual_search">
+     <attribute name="title">
+      <string>개별 검색</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1221</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>1. 좌위 입력</string>
+      </property>
+      <widget class="QTableWidget" name="table_id_query">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>27</y>
+         <width>1201</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>135</y>
+        <width>621</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>2. 검색 조건 설정</string>
+      </property>
+      <widget class="QDateEdit" name="date_id_from">
+       <property name="geometry">
+        <rect>
+         <x>77</x>
+         <y>24</y>
+         <width>141</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="date_id_to">
+       <property name="geometry">
+        <rect>
+         <x>259</x>
+         <y>25</y>
+         <width>141</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>31</y>
+         <width>56</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>검색일 : </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>231</x>
+         <y>29</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>~</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="sb_id_threshold">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>87</x>
+         <y>62</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="minimum">
+        <number>7</number>
+       </property>
+       <property name="maximum">
+        <number>21</number>
+       </property>
+       <property name="singleStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>21</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>72</y>
+         <width>221</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;일치 개수 : &lt;/p&gt;&lt;p&gt;(최대 : 21 - AMEL 포함)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <zorder>date_id_from</zorder>
+      <zorder>date_id_to</zorder>
+      <zorder>label_6</zorder>
+      <zorder>label_7</zorder>
+      <zorder>label_8</zorder>
+      <zorder>sb_id_threshold</zorder>
+     </widget>
+     <widget class="QPushButton" name="btn_id_search">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>291</y>
+        <width>621</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>검색</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_id_load_clipboard">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>140</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>클립보드 불러오기</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_result">
+     <attribute name="title">
+      <string>결과</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>19</y>
+        <width>251</width>
+        <height>691</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>결과</string>
+      </property>
+      <widget class="QListWidget" name="list_result_matched">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>231</width>
+         <height>491</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="text_result_summary">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>231</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>20</y>
+        <width>1141</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Query</string>
+      </property>
+      <widget class="QTableWidget" name="table_result_query">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>1121</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_8">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>140</y>
+        <width>1141</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Target</string>
+      </property>
+      <widget class="QTableWidget" name="table_result_target">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>1121</width>
+         <height>531</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>도구</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>621</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>DB 입력</string>
+      </property>
+      <widget class="QPushButton" name="btn_tool_update_files">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>여러 파일에서 업데이트</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_tool_update_folder">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>30</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>폴더 내 파일에서 업데이트</string>
+       </property>
+      </widget>
+      <widget class="QTextBrowser" name="text_tool_progress">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>581</width>
+         <height>241</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_tool_load_backup">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>30</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>백업 파일 불러오기</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_load_tomato</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>click_btn_file_tomato()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>533</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>628</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_file_search</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>click_btn_file_search()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>471</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>628</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_result_matched</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>click_item_list_result()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>195</x>
+     <y>401</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tabWidget</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>click_tab_resize()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>15</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>220</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_id_search</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>click_btn_file_id()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>280</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>585</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_tool_update_files</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>click_btn_tool_update_from_files()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>114</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_tool_update_folder</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>click_btn_tool_update_from_folder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>333</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_tool_load_backup</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>click_btn_tool_load_backup()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>510</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>557</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_id_load_clipboard</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>click_btn_id_load_clipboard()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>739</x>
+     <y>183</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>628</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>click_btn_file_tomato()</slot>
+  <slot>click_btn_file_search()</slot>
+  <slot>click_item_list_result()</slot>
+  <slot>click_tab_resize()</slot>
+  <slot>click_btn_file_id()</slot>
+  <slot>click_btn_tool_update_from_files()</slot>
+  <slot>click_btn_tool_update_from_folder()</slot>
+  <slot>click_btn_tool_load_backup()</slot>
+  <slot>click_btn_id_load_clipboard()</slot>
+ </slots>
+</ui>
